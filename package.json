@@ -1,0 +1,56 @@
+{
+  "name": "html-ninja-star",
+  "version": "1.0.0",
+  "description": "Simple static html web page builder",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigbassroller/ninja-star.git"
+  },
+  "keywords": [],
+  "author": "Michael Chavez, Space-Rocket | Web & Graphic Design",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigbassroller/ninja-star/issues"
+  },
+  "homepage": "https://github.com/bigbassroller/ninja-star#readme",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.1",
+    "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.11.0",
+    "del": "^2.2.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "font-awesome": "^4.5.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-inject": "^3.0.0",
+    "gulp-newer": "^1.1.0",
+    "gulp-nunjucks-render": "^1.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-tslint": "^4.3.0",
+    "gulp-typescript": "^2.10.0",
+    "gulp-util": "^3.0.7",
+    "merge-stream": "^1.0.0",
+    "path": "^0.12.7",
+    "reflect-metadata": "^0.1.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5",
+    "rxjs": "^5.0.0-beta.0",
+    "superstatic": "^4.0.1",
+    "systemjs": "^0.19.16",
+    "tslint": "^3.2.1",
+    "webpack": "^1.12.10",
+    "zone.js": "^0.5.10"
+  },
+  "devDependencies": {
+    "gulp-html-prettify": "0.0.1",
+    "gulp-htmlclean": "^2.7.6",
+    "gulp-nunjucks-html": "^2.0.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% set title = "Angular 2 Heroes | Homepage" %}
+{% set active_page = "index" %}
+{% block main %} 
+<main class="container theme-showcase" role="main">
+  <div class="jumbotron">
+    <h1>Build Beautiful Angular 2 Apps</h1>
+    <p>A simple static Angular 2 site builder that uses Gulp and Nunjucks. Modularize your Angular 2 HTML code by using templates and partials.</p>
+		<p class="text-center">
+				<a class="btn btn-primary btn-lg" href="https://github.com/bigbassroller/html-ninja-star">Download on Github</a>
+		</p>
+  </div>
+  {% include "../templates/partials/features.html" %} 	
+</main>
+<my-app></my-app>
+{% endblock %}
