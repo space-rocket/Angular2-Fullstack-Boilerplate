@@ -1,6 +1,6 @@
-# HTML Ninja Star
+# Angular2 Heroes Router
 
-A simple static site builder that uses Gulp and Nunjucks
+A simple static Angular2 app builder that uses Gulp and Nunjucks
 
 
 ## Features
@@ -14,7 +14,7 @@ A simple static site builder that uses Gulp and Nunjucks
 
 | url                                                              | 
 |:---------------------------------------------------------------- |
-| [http://bigbassroller.github.io/html-ninja-star/](http://bigbassroller.github.io/html-ninja-star/) |
+| [http://bigbassroller.github.io/Angular2-Heroes-Router/](http://bigbassroller.github.io/Angular2-Heroes-Router/) |
 
 
 ## Requirements
