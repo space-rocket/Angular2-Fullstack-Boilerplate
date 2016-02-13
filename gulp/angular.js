@@ -11,7 +11,8 @@ Gulp.task('angular', function () {
             './node_modules/systemjs/dist/system.src.js',
             './node_modules/rxjs/bundles/Rx.js',
             './node_modules/angular2/bundles/angular2.dev.js',
-            './node_modules/angular2/bundles/router.js'
+            './node_modules/angular2/bundles/router.js',
+            './node_modules/angular2/bundles/http.js'
             // './node_modules/angular2/router.js'
         ],
         dest: './public/src',

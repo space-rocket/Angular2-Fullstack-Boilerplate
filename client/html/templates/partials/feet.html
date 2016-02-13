@@ -11,12 +11,17 @@
 		  //map tells the System loader where to look for things
 		  map: {
 		    app: "./src",
-		    'redux': 'https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.js'
+		    'redux': 'https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.js',
+		    'angular2-jwt': 'src/angular2-jwt.js'
 		  },
 		  //packages defines our app package
 		  packages: {
 		    app: {
-		      main: './main.js',
+		    	format: 'register',
+		      main: 'src/app.js',
+		      defaultExtension: 'js'
+		    },
+		    'angular2-jwt': {
 		      defaultExtension: 'js'
 		    }
 		  }

@@ -1,0 +1,48 @@
+  <header class="content-heading">
+    <h1 data-text="Patient Portal Login">Patient Portal Login</h1>
+  </header>
+
+<div class="contents">
+  <div class="col-sm-12">
+    <form id="login-form" role="form">
+      <div ng-control-group="credentials">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            #username
+            id="username"
+            ng-control="username"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            #password
+            id="password"
+            ng-control="password"
+            required>
+        </div>
+      </div>
+
+      <button (click)="authenticate(username, password)" class="btn btn-primary">Login</button>
+      <a href="/signup">Click here to Signup</a>
+    </form>
+  </div>
+</div>
+
+
+  <section>
+    <h2>Random Quote</h2>
+    <hr>
+    <h3>{{ randomQuote }}</h3>
+    <button (click)="getRandomQuote()">Get Random Quote!</button>
+  <section>
+
+  <section>
+    <h2>Secret Quote</h2>
+    <hr>
+    <h3>{{ secretQuote }}</h3>
+    <button (click)="getSecretQuote()">Get Secret Quote!</button>
+  <section>

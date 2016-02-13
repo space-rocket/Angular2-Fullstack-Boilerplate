@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <title>Angular 2 Heroes | Homepage</title>
+  <link href="assets/css/main.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- Set the base href -->
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <script type="text/javascript" src="./assets/js/jwt-decode/jwt-decode.js"></script>
+</head>
+
+<body role="document">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">Angular 2 Heroes</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="http://localhost:8000/">Home</a>
+          </li>
+          <li>
+            <a href="http://localhost:8000/style-guide.html">Style Guide</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container theme-showcase" role="main">
+    <div class="jumbotron">
+      <h1>Build Beautiful Angular 2 Apps</h1>
+      <p>A simple static Angular 2 site builder that uses Gulp and Nunjucks. Modularize your Angular 2 HTML code by using templates and partials.</p>
+      <p class="text-center">
+        <a class="btn btn-primary btn-lg" href="https://github.com/bigbassroller/html-ninja-star">Download on Github</a>
+      </p>
+    </div>
+    <hr>
+    <h2 class="text-center">Be Friends with HTML, Again</h2>
+    <p class="lead">Use new technology to build good ol' static HTML</p>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>
+			<i class="fa fa-firefox"></i>
+			Nunjucks
+		</h3>
+        <p>A powerful templating engine with inheritance, asynchronous control, and more (jinja2 inspired) http://mozilla.github.io/nunjucks/</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>
+			<i class="fa fa-bolt"></i>
+			Bootstrap
+		</h3>
+        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>
+			<i class="fa fa-pied-piper-alt"></i>
+			Font Awesome
+		</h3>
+        <p>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</p>
+      </div>
+    </div>
+    <hr>
+  </main>
+  <my-app></my-app>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="text-center">Made by @SpaceRocketSF. Code licensed under The MIT License.</p>
+      <p class="text-center">A special thanks goes to the creators and contributors of the tools Angular 2 Redux is built with and the open source community.</p>
+    </div>
+  </footer>
+
+  <script src="./src/angular-build.js"></script>
+
+  <script>
+    System.config({
+    		  //use typescript for compilation
+    		  transpiler: 'typescript',
+    		  //typescript compiler options
+    		  typescriptOptions: {
+    		    emitDecoratorMetadata: true
+    		  },
+    		  //map tells the System loader where to look for things
+    		  map: {
+    		    app: "./src",
+    		    'redux': 'https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.js',
+    		    'angular2-jwt': 'src/angular2-jwt.js'
+    		  },
+    		  //packages defines our app package
+    		  packages: {
+    		    app: {
+    		    	format: 'register',
+    		      main: 'src/app.js',
+    		      defaultExtension: 'js'
+    		    },
+    		    'angular2-jwt': {
+    		      defaultExtension: 'js'
+    		    }
+    		  }
+    		});
+        System.import('src/boot.js')
+          .catch(console.error.bind(console));
+  </script>
+</body>
+
+</html>
