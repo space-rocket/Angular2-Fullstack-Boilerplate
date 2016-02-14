@@ -1,3 +1,4 @@
+var nunjucks        = require('nunjucks');
 var logger          = require('morgan'),
     cors            = require('cors'),
     http            = require('http'),
@@ -34,6 +35,21 @@ if (process.env.NODE_ENV === 'development') {
 app.use(require('./anonymous-routes'));
 app.use(require('./protected-routes'));
 app.use(require('./user-routes'));
+app.use(express.static('../public'));
+
+nunjucks.configure('views', {
+  autoescape: true,
+  express   : app
+});
+
+app.get('/', function(req, res) {
+  res.render('pages/index.html');
+});
+
+app.get('/*', function(req, res) {
+  res.render('pages/index.html');
+});
+
 
 var port = process.env.PORT || 3001;
 
