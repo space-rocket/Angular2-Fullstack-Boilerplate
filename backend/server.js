@@ -5,6 +5,7 @@ var logger          = require('morgan'),
     errorhandler    = require('errorhandler'),
     dotenv          = require('dotenv'),
     bodyParser      = require('body-parser');
+    nunjucks        = require('nunjucks');
 
 var app = express();
 
@@ -34,8 +35,19 @@ if (process.env.NODE_ENV === 'development') {
 app.use(require('./anonymous-routes'));
 app.use(require('./protected-routes'));
 app.use(require('./user-routes'));
+app.use(express.static('../public'));
 
-var port = process.env.PORT || 3001;
+nunjucks.configure('views', {
+  autoescape: true,
+  express   : app
+});
+
+
+app.get('/', function(req, res) {
+    res.render('templates/base.html');
+});
+
+var port = process.env.PORT || 8000;
 
 http.createServer(app).listen(port, function (err) {
   console.log('listening in http://localhost:' + port);
