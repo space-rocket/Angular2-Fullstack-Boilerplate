@@ -1,3 +1,4 @@
+var nunjucks        = require('nunjucks');
 var logger          = require('morgan'),
     cors            = require('cors'),
     http            = require('http'),
@@ -5,7 +6,6 @@ var logger          = require('morgan'),
     errorhandler    = require('errorhandler'),
     dotenv          = require('dotenv'),
     bodyParser      = require('body-parser');
-    nunjucks        = require('nunjucks');
 
 var app = express();
 
@@ -35,19 +35,31 @@ if (process.env.NODE_ENV === 'development') {
 app.use(require('./anonymous-routes'));
 app.use(require('./protected-routes'));
 app.use(require('./user-routes'));
+
+// Allow assets from public to be used
 app.use(express.static('../public'));
 
+// Use nunjucks
 nunjucks.configure('views', {
   autoescape: true,
   express   : app
 });
 
-
+// Render nunjucks routes
 app.get('/', function(req, res) {
-    res.render('templates/base.html');
+  res.render('pages/index.html');
 });
 
-var port = process.env.PORT || 8000;
+app.get('/login', function(req, res) {
+  res.render("pages/index.html");
+});
+
+app.get('/home', function(req, res) {
+  res.render("pages/index.html");
+});
+
+
+var port = process.env.PORT || 3001;
 
 http.createServer(app).listen(port, function (err) {
   console.log('listening in http://localhost:' + port);
