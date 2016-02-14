@@ -35,18 +35,26 @@ if (process.env.NODE_ENV === 'development') {
 app.use(require('./anonymous-routes'));
 app.use(require('./protected-routes'));
 app.use(require('./user-routes'));
+
+// Allow assets from public to be used
 app.use(express.static('../public'));
 
+// Use nunjucks
 nunjucks.configure('views', {
   autoescape: true,
   express   : app
 });
 
+// Render nunjucks routes
 app.get('/', function(req, res) {
   res.render('pages/index.html');
 });
 
-app.get('*', function(req, res) {
+app.get('/login', function(req, res) {
+  res.render("pages/index.html");
+});
+
+app.get('/home', function(req, res) {
   res.render("pages/index.html");
 });
 
