@@ -8,7 +8,7 @@ import {Signup} from '../signup/signup';
 
 
 @Component({
-  selector: 'auth-app'
+  selector: 'app'
 })
 @View({
 	templateUrl: './src/app/app.html',

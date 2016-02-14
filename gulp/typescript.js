@@ -12,6 +12,9 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     superstatic = require( 'superstatic' );
 
+var Path = require('path');
+var Merge = require('merge-stream');
+
 var config = new Config();
 
 /**
@@ -68,6 +71,22 @@ gulp.task('clean-ts', function (cb) {
   del(typeScriptGenFiles, cb);
 });
 
+gulp.task('html', function () {
+
+    var mvHtml = gulp.src('./client/src/**/*.html')
+            .pipe(gulp.dest(Path.join('./public/src/')));
+
+    return Merge(mvHtml);
+});
+
+gulp.task('css', function () {
+
+    var mvCss = gulp.src('./client/src/**/*.css')
+            .pipe(gulp.dest(Path.join('./public/src/')));
+
+    return Merge(mvCss);
+});
 
 
-gulp.task('typescript', ['ts-lint', 'compile-ts']);
+
+gulp.task('typescript', ['ts-lint', 'compile-ts', 'html', 'css']);
