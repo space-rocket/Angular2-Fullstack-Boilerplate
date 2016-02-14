@@ -46,8 +46,8 @@ app.get('/', function(req, res) {
   res.render('pages/index.html');
 });
 
-app.get('/*', function(req, res) {
-  res.render('pages/index.html');
+app.get('*', function(req, res) {
+  res.render("pages/index.html");
 });
 
 
