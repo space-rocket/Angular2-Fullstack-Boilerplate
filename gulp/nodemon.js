@@ -10,7 +10,7 @@ Gulp.task('nodemon', function () {
     }
 
     Nodemon({
-        script: 'backend/server.js',
+        script: 'server.js',
         ext: 'js md',
         ignore: [
             'client/**/*',

@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('build', ['sass', 'angular', 'typescript', 'media', 'scripts', 'html', 'nodemon']);
+gulp.task('build', ['angular', 'typescript', 'sass', 'media', 'scripts']);
