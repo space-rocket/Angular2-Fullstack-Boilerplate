@@ -12,9 +12,4 @@ Gulp.task('watch', function () {
     Gulp.watch('./**/*.ts', ['typescript']);
     Gulp.watch('./**/*/*.ts', ['typescript']);
     Gulp.watch('./**/*/*/*.ts', ['typescript']);
-
-    Gulp.watch('./*.html', ['nunjucks']);
-    Gulp.watch('./**/*.html', ['nunjucks']);
-    Gulp.watch('./**/*/*.html', ['nunjucks']);
-    Gulp.watch('./**/*/*/*.html', ['nunjucks']);
 });
