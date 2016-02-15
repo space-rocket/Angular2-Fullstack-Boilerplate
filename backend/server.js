@@ -55,6 +55,10 @@ app.get('/home', function(req, res) {
   res.render("pages/index.html");
 });
 
+app.get('/style-guide.html', function(req, res) {
+  res.render("pages/style-guide.html");
+});
+
 // Allow assets from public to be used
 app.use(express.static('../public'));
 
