@@ -10,10 +10,10 @@ import { Router } from 'angular2/router';
 })
 @View({
   directives: [CORE_DIRECTIVES],
-  templateUrl: './src/home/home.html',
-  styleUrls: ['./src/home/home.css']
+  templateUrl: './src/home/home.component.html',
+  styleUrls: ['./src/home/home.component.css']
 })
-export class Home {
+export class HomeComponent {
   jwt: string;
   decodedJwt: string;
   response: string;

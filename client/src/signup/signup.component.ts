@@ -1,25 +1,25 @@
 import { Component, View } from 'angular2/core';
 import { Router, RouterLink } from 'angular2/router';
 import { CORE_DIRECTIVES, FORM_DIRECTIVES } from 'angular2/common';
-import { Http, Headers } from 'angular2/http';
+import { Http } from 'angular2/http';
 import { contentHeaders } from '../common/headers';
 
 @Component({
-  selector: 'login'
+  selector: 'signup'
 })
 @View({
-  directives: [RouterLink, CORE_DIRECTIVES, FORM_DIRECTIVES ],
-  templateUrl: './src/login/login.html',
-  styleUrls: ['./src/login/login.css']
+  directives: [ RouterLink, CORE_DIRECTIVES, FORM_DIRECTIVES ],
+  templateUrl: './src/signup/signup.html',
+  styleUrls: ['./src/signup/signup.css']
 })
-export class Login {
+export class SignupComponent {
   constructor(public router: Router, public http: Http) {
   }
 
-  login(event, username, password) {
+  signup(event, username, password) {
     event.preventDefault();
     let body = JSON.stringify({ username, password });
-    this.http.post('http://localhost:3001/sessions/create', body, { headers: contentHeaders })
+    this.http.post('http://localhost:3001/users', body, { headers: contentHeaders })
       .subscribe(
         response => {
           localStorage.setItem('jwt', response.json().id_token);
@@ -32,8 +32,9 @@ export class Login {
       );
   }
 
-  signup(event) {
+  login(event) {
     event.preventDefault();
-    this.router.parent.navigateByUrl('/signup');
+    this.router.parent.navigateByUrl('/login');
   }
+
 }
