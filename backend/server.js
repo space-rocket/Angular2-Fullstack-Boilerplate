@@ -36,9 +36,6 @@ app.use(require('./anonymous-routes'));
 app.use(require('./protected-routes'));
 app.use(require('./user-routes'));
 
-// Allow assets from public to be used
-app.use(express.static('../public'));
-
 // Use nunjucks
 nunjucks.configure('views', {
   autoescape: true,
@@ -58,6 +55,8 @@ app.get('/home', function(req, res) {
   res.render("pages/index.html");
 });
 
+// Allow assets from public to be used
+app.use(express.static('../public'));
 
 var port = process.env.PORT || 3001;
 
