@@ -4,3 +4,4 @@ public
 app/__build/
 app/__typings/
 znotes/
+npm-debug.log
