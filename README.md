@@ -1,4 +1,4 @@
-# Angular2 Heroes Router
+# Angular2 Fullstack Boilerplate
 
 A simple FullStack Angular2 app boilerplate that uses Express, Nunjucks and Gulp.
 
