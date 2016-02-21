@@ -1,6 +1,6 @@
 # Angular2 Heroes Router
 
-A simple static Angular2 app builder that uses Gulp and Nunjucks
+A simple FullStack Angular2 app boilerplate that uses Express, Nunjucks and Gulp.
 
 
 ## Features
