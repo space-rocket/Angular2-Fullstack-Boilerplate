@@ -11,13 +11,6 @@ A simple FullStack Angular2 app boilerplate that uses Express, Nunjucks and Gulp
 +   [Font Awesome](http://fontawesome.io/)
 
 
-## Live demo
-
-| url                                                              | 
-|:---------------------------------------------------------------- |
-| [http://bigbassroller.github.io/Angular2-Fullstack-Boilerplate/](http://bigbassroller.github.io/Angular2-Fullstack-Boilerplate/) |
-
-
 ## Requirements
 
 [Node.js](http://nodejs.org/download/)
