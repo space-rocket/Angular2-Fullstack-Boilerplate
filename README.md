@@ -4,7 +4,8 @@ A simple static Angular2 app builder that uses Gulp and Nunjucks
 
 
 ## Features
-
++   [Angular2](https://angular.io/)
++   [Gulp](http://gulpjs.com/)
 +   [Nunjucks](https://mozilla.github.io/nunjucks/) for templating 
 +   [Bootstrap](http://getbootstrap.com/) SASS
 +   [Font Awesome](http://fontawesome.io/)
@@ -14,7 +15,7 @@ A simple static Angular2 app builder that uses Gulp and Nunjucks
 
 | url                                                              | 
 |:---------------------------------------------------------------- |
-| [http://bigbassroller.github.io/Angular2-Heroes-Router/](http://bigbassroller.github.io/Angular2-Heroes-Router/) |
+| [http://bigbassroller.github.io/Angular2-Fullstack-Boilerplate/](http://bigbassroller.github.io/Angular2-Fullstack-Boilerplate/) |
 
 
 ## Requirements
@@ -30,7 +31,7 @@ $ npm install --global gulp
 ```
 Next git clone the repo and install npm packages:
 ```bash
-$ git clone git@github.com:bigbassroller/html-ninja-star.git && cd ./html-ninja-star
+$ git clone git@github.com:bigbassroller/Angular2-Fullstack-Boilerplate.git && cd ./Angular2-Fullstack-Boilerplate
 $ npm install
 ```
 
@@ -56,7 +57,7 @@ and relevant version details such as:
 ```bash
 $ npm version
 
-# {'html-ninja-star': '1.0.0',
+# {'Angular2-Fullstack-Boilerplate': '1.0.0',
 #   npm: '3.3.12',
 #   ares: '1.10.1-DEV',
 #   http_parser: '2.6.0',
