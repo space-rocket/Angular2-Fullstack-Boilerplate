@@ -1,22 +1,22 @@
 {
-  "name": "html-ninja-star",
+  "name": "Angular2-Fullstack-Boilerplate",
   "version": "1.0.0",
-  "description": "Simple static html web page builder",
+  "description": "Angular2 Fullstack Boilerplate. Featuring Gulp, Nunjucks, Bootstrap and FontAwesome. Express is used for backend middle ware server.",
   "main": "gulpfile.js",
   "scripts": {
     "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigbassroller/ninja-star.git"
+    "url": "git+https://github.com/bigbassroller/Angular2-Fullstack-Boilerplate.git"
   },
   "keywords": [],
   "author": "Michael Chavez, Space-Rocket | Web & Graphic Design",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bigbassroller/ninja-star/issues"
+    "url": "https://github.com/bigbassroller/Angular2-Fullstack-Boilerplate/issues"
   },
-  "homepage": "https://github.com/bigbassroller/ninja-star#readme",
+  "homepage": "https://github.com/bigbassroller/Angular2-Fullstack-Boilerplate#readme",
   "dependencies": {
     "angular2": "2.0.0-beta.3",
     "angular2-jwt": "^0.1.6",
