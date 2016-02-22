@@ -65,7 +65,7 @@ $ npm version
 
 Contributions are welcome. 
 
-## Rough road map:
+## Road map:
 + Add routes to each page. Each page would essenstially be its own app. Inspired by [Jedi Reza's Aqua project](https://github.com/jedireza/aqua)
 + Add Jquery [See this article, by Torgeir Helgevold](http://www.syntaxsuccess.com/viewarticle/using-jquery-with-angular-2.0)
 + Add MongoDB. Open to other options. 
