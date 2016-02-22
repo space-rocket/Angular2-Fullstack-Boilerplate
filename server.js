@@ -27,17 +27,17 @@ app.use(function(err, req, res, next) {
   }
 });
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(express.logger('dev'));
-  app.use(errorhandler())
-}
+// if (process.env.NODE_ENV === 'development') {
+//   app.use(express.logger('dev'));
+//   app.use(errorhandler())
+// }
 
-app.use(require('./anonymous-routes'));
-app.use(require('./protected-routes'));
-app.use(require('./user-routes'));
+app.use(require('./server/anonymous-routes'));
+app.use(require('./server/protected-routes'));
+app.use(require('./server/user-routes'));
 
 // Use nunjucks
-nunjucks.configure('views', {
+nunjucks.configure('server/views', {
   autoescape: true,
   express   : app
 });
@@ -48,19 +48,19 @@ app.get('/', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-  res.render("pages/index.html");
+  res.render('pages/index.html');
 });
 
 app.get('/home', function(req, res) {
-  res.render("pages/index.html");
+  res.render('pages/index.html');
 });
 
 app.get('/style-guide.html', function(req, res) {
-  res.render("pages/style-guide.html");
+  res.render('pages/style-guide.html');
 });
 
 // Allow assets from public to be used
-app.use(express.static('../public'));
+app.use(express.static('./public'));
 
 var port = process.env.PORT || 3001;
 
