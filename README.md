@@ -36,7 +36,7 @@ $ gulp
 
 ## Why? 
 
- - Create static hand coded HTML markup
+ - Create awesome Angular2 Apps
  - Write HTML using partials and components
  - Scalable and easy to maintain
 
@@ -65,6 +65,18 @@ $ npm version
 
 Contributions are welcome. 
 
+## Rough road map:
++ Add routes to each page. Each page would essenstially be its own app. Inspired by [Jedi Reza's Aqua project](https://github.com/jedireza/aqua)
++ Add Jquery [See this article, by Torgeir Helgevold](http://www.syntaxsuccess.com/viewarticle/using-jquery-with-angular-2.0)
++ Add MongoDB. Open to other options. 
++ Add todo component that stores in mongodb.
++ Add push pin notifications with web workers
++ Put up demo site
++ Add env vars or config file [see 12 factor app for details] (http://12factor.net/config)
++ Add users and roles. Once again inspired by [Jedi Reza's Aqua project](https://github.com/jedireza/aqua)
++ Add [Angular2 Universal](https://github.com/angular/universal)
++ Add postman for authentication
++ Add nodemailer
 
 ## License
 
