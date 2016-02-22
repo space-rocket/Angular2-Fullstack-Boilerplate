@@ -75,8 +75,8 @@ Contributions are welcome.
 + Add env vars or config file [see 12 factor app for details] (http://12factor.net/config)
 + Add users and roles. Once again inspired by [Jedi Reza's Aqua project](https://github.com/jedireza/aqua)
 + Add [Angular2 Universal](https://github.com/angular/universal)
-+ Add postman for authentication
-+ Add nodemailer
++ Add Passport for authentication
++ Add Nodemailer for sending emails
 
 ## License
 
