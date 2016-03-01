@@ -31,6 +31,7 @@
     "es6-promise": "3.0.2",
     "es6-shim": "^0.33.13",
     "express": "^4.13.4",
+    "express-jwt": "^3.3.0",
     "font-awesome": "^4.5.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
